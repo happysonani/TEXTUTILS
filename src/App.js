@@ -58,17 +58,22 @@ function App() {
 
  <div className="container my-3">
  
- <Switch>
-          <Route path="/about">
-            <About />
+ <Switch> 
+  react using parsel so when we conding , write exact.
+
+{/*users --> Component 1
+/users/home --> --> Component 2 */}
+          
+         <Route exact path="/about">
+            <About mode={mode} />
           </Route>
   
-        <Route path="/">
-        <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>  
+        <Route exact path="/"> 
+        <Textform showAlert={showAlert} heading=" Try TextUtils - word counter ,character counter ,Remove extra spaces" mode={mode}/>  
        </Route>
-    </Switch>
+    </Switch> 
   </div>
-  </Router>
+  </Router> 
   </>
    );
 }
